@@ -23,21 +23,20 @@ class Human:
 
 
 
-class Warrior(Human):
+class leader(Human):
     pass
 
-class Mag(Human):
+class funny(Human):
     pass
 
-volshebnik = Mag("Dambldor", 15, 50, 200, 300, 50, 200)
-voin = Warrior("Voyaka", 12, 100, 150, 0, 100, 25)
-voin.print_info()
-voin.take_damage(60)
-voin.print_info()
-print("")
-volshebnik.print_info()
-volshebnik.take_damage(50)
-volshebnik.print_info()
+class playful(Human):
+    pass
+
+
+kevin = leader("Кевин, лидер нашей отважной группки миньонов.", 12, 100, 150, 0, 100, 25)
+bob = funny("Боб, глупый, милый, симпатичный миньончик.", 15, 30, 200, 300, 50, 200)
+stuart = playful("Стюарт, игривый интригант в мире миньонов.", 6, 55, 100, 0, 150, 50)
+
 
 
 # print("Введите имя персонажа")
