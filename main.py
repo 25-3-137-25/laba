@@ -1,4 +1,6 @@
 from party import *
+from species import *
+
 print("ВЫ В МИРЕ МУЛЬТФИЛЬМА ГАДКИЙ Я. НА ВЫБОР ЕСТЬ 3 НАИЛУЧШИХ БОЙЦА-МИНЬОНА:")
 print("")
 print(1)

@@ -1,22 +1,24 @@
 class Human:
-    def __init__(self, Name, Level, Strengh, hp, MP, Dexterity, IQ):
-        self.Name = Name
-        self.Level = Level
-        self.Strengh = Strengh
+    def __init__(self, name, level, strengh, hp, mp, dexterity, iq):
+        self.name = name
+        self.level = level
+        self.strengh = strengh
         self.hp = hp
-        self.MP = MP
-        self.Dexterity = Dexterity
-        self.IQ = IQ
+        self.mp = mp
+        self.dexterity = dexterity
+        self.iq = iq
 
 
     def print_info(self):
-        print('Имя: {}. Уровень: {}. Сила: {}. ХП: {}. Мана: {}. Ловкость: {}. Интеллект: {}'.format(self.Name, self.Level, self.Strengh, self.hp, self.MP, self.Dexterity, self.IQ))
+        print('Имя: {}. Уровень: {}. Сила: {}. ХП: {}. Мана: {}. Ловкость: {}. Интеллект: {}'.format(self.name, self.level, self.strengh, self.hp, self.mp, self.dexterity, self.iq))
 
     def take_damage(self, damage):
         self.hp -= damage
         print(f"Получено {damage} урона")
 
-
+    def attack(self, target, amount):
+        target.take_damage(amount)
+        print(f"Персонажу {target} нанесено {amount} урона")
 
 
 
@@ -29,7 +31,5 @@ class funny(Human):
 class playful(Human):
     pass
 
-
-kevin = leader("Кевин, лидер нашей отважной группки миньонов.", 12, 100, 150, 0, 100, 25)
-bob = funny("Боб, глупый, милый, симпатичный миньончик.", 15, 30, 200, 300, 50, 200)
-stuart = playful("Стюарт, игривый интригант в мире миньонов.", 6, 55, 100, 0, 150, 50)
+class Boss:
+    def __init__(self, name, hp, ):
