@@ -1,6 +1,6 @@
 from party import *
 from species import *
-
+'''
 print("ВЫ В МИРЕ МУЛЬТФИЛЬМА ГАДКИЙ Я. НА ВЫБОР ЕСТЬ 3 НАИЛУЧШИХ БОЙЦА-МИНЬОНА:")
 print("")
 print(1)
@@ -22,4 +22,7 @@ if a in characters:
     print(f"ВАШ ПЕРСОНАЖ - {characters[a]}")
 else:
     print("ПЕРСОНАЖА ПОД ТАКИМ НОМЕРОМ НЕТ.")
-
+'''
+print(stuart.__dict__)
+kevin.butt(stuart, kevin.damage, kevin.dexterity)
+print(stuart.__dict__)
