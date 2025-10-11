@@ -16,6 +16,9 @@ print(3)
 stuart.print_info()
 print("")
 print("")
+print("Учтите, что на каждый удар с вашей стороны приходится по 2 удара со стороны босса.")
+print("")
+print("")
 while hitler.alive():
     print(f"У вашего врага на данный момент {hitler.hp} хп")
     print("")
@@ -27,15 +30,18 @@ while hitler.alive():
         print(f"Ваш персонаж - {characters[a]}")
         if a == "1" or "кевин":
             if kevin.zhiv():
-                hitler.attacking(kevin, hitler.damage)
+                print(f"У Кевина сейчас {kevin.hp} хп")
                 print("Выберите атаку из двух: 1. Удар кулаком 2. Удар пятой точкой. Напишите номер атаки")
                 b = int(input())
                 if b == 1:
                     kevin.hand(hitler, kevin.damage, kevin.strengh, kevin.stiffness)
                 elif b == 2:
                     kevin.butt(hitler, kevin.damage, kevin.dexterity, kevin.stiffness)
-                print("")
                 hitler.attacking(kevin, hitler.damage)
+                if kevin.hp <= 0:
+                    print("Кевин погиб")
+                else:
+                    print("У Кевина теперь {kevin.hp} хп")
             else:
                 print("Кевин мертв, выберите другого персонажа")
     else:
