@@ -16,7 +16,7 @@ class Human:
 
 
     def yroven(self, someone):
-        return ((someone.level - self.level) / 5)
+        return ( 60 / (someone.level - self.level))
 
     def print_info(self):
         print('Имя: {}. Уровень: {}. Сила: {}. ХП: {}. Ловкость: {}. Интеллект: {}.'.format(self.name, self.level, self.strengh, self.hp, self.dexterity, self.iq))
@@ -33,12 +33,12 @@ class leader(Human):
 
 
     def hand(self, target, damage, strengh, stiffness):
-        target.take_damage(self.yroven(target) * (damage + (strengh*0.2) + (stiffness/50)))
-        print(f"Персонаж {self.name} ударил кулаком персонажа {target.name}, нанеся {self.yroven(target) * (damage + (strengh*0.2) + (stiffness/50))} урона")
+        target.take_damage(self.yroven(target) + (damage + (strengh*0.2) + (stiffness/50)))
+        print(f"Персонаж {self.name} ударил кулаком персонажа {target.name}, нанеся {self.yroven(target) + (damage + (strengh*0.2) + (stiffness/50))} урона")
 
     def butt(self, target, damage, dexterity, stiffness):
-        target.take_damage(self.yroven(target) * (damage + (dexterity*0.2) + (stiffness/40)))
-        print(f"Персонаж {self.name} толкнул своей пятой точкой персонажа {target.name}, нанеся {self.yroven(target) * (damage + (dexterity*0.2))} урона")
+        target.take_damage(self.yroven(target) + (damage + (dexterity*0.2) + (stiffness/40)))
+        print(f"Персонаж {self.name} толкнул своей пятой точкой персонажа {target.name}, нанеся {self.yroven(target) + (damage + (dexterity*0.2))} урона")
 
 
 
@@ -49,12 +49,12 @@ class funny(Human):
 
 
     def papaya(self, target, damage, idiocy):
-        target.take_damage(self.yroven(target) * (damage + (idiocy*0.3)))
-        print(f"Персонаж {self.name} настолько сильно накричал на персонажа {target.name}, что тот даже получил {self.yroven(target) * (damage + (idiocy*0.3))} урона")
+        target.take_damage(self.yroven(target) + (damage + (idiocy*0.3)))
+        print(f"Персонаж {self.name} настолько сильно накричал на персонажа {target.name}, что тот даже получил {self.yroven(target) + (damage + (idiocy*0.3))} урона")
 
     def licking(self, target, damage, idiocy, dexterity):
-        target.take_damage(self.yroven(target) * (damage + (idiocy*0.1) + (dexterity*0.2)))
-        print(f"Персонаж {self.name}, достал свой шершавый залежалый язык, вылизал им персонажа {target.name}, тем самым нанёс {self.yroven(target) * (damage + (idiocy*0.1) + (dexterity*0.2))} урона")
+        target.take_damage(self.yroven(target) + (damage + (idiocy*0.1) + (dexterity*0.2)))
+        print(f"Персонаж {self.name}, достал свой шершавый залежалый язык, вылизал им персонажа {target.name}, тем самым нанёс {self.yroven(target) + (damage + (idiocy*0.1) + (dexterity*0.2))} урона")
 
 
 
@@ -65,11 +65,11 @@ class playful(Human):
 
 
     def bobo(self, target, damage, playfulness, strengh):
-        target.take_damage(self.yroven(target) * (damage + playfulness*0.6 + strengh*0.1))
-        print(f"Персонажу {target.name} сделал бобо {self.name}, нанеся {self.yroven(target) * (damage + playfulness*0.6 + strengh*0.1)} урона")
+        target.take_damage(self.yroven(target) + (damage + playfulness*0.6 + strengh*0.1))
+        print(f"Персонажу {target.name} сделал бобо {self.name}, нанеся {self.yroven(target) + (damage + playfulness*0.6 + strengh*0.1)} урона")
 
     def augh(self, target, damage, playfulness):
-        target.take_damage(self.yroven(target) * (damage + playfulness*0.8))
-        print(f"Персонаж {target.name} закричал АУЧ после удара {self.name}, получив {self.yroven(target) * (damage + playfulness*0.8)} урона")
+        target.take_damage(self.yroven(target) + (damage + playfulness*0.8))
+        print(f"Персонаж {target.name} закричал АУЧ после удара {self.name}, получив {self.yroven(target) + (damage + playfulness*0.8)} урона")
 
 

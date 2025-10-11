@@ -79,5 +79,5 @@ while hitler.alive():
         print(f"{minion.name} погиб")
     else:
         print(f"У {minion.name} теперь {minion.hp} хп")
-
-print("ура гитлер сдох")
+print("")
+print("ура гитлер сдох вы молодец")
