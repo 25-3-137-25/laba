@@ -16,15 +16,15 @@ class vrag(Boss):
         super().__init__(name, level, hp, damage)
 
     def attacking(self, cel, damage):
-        if 200 <= self.hp <= 250:
+        if 210 <= self.hp <= 310:
             cel.take_damage((damage*2))
             print("Гитлер находится в ПЕРВОЙ ФАЗЕ")
             print(f"Персонаж {cel.name} отхватил по бошке от босса по имени {self.name} и получил {(damage*2)} урона")
-        elif 100 <= self.hp <= 199:
+        elif 109 <= self.hp <= 209:
             cel.take_damage((damage * 1.5))
             print("Гитлер находится во ВТОРОЙ ФАЗЕ")
             print(f"Персонаж {cel.name} отхватил по бошке от босса по имени {self.name} и получил {(damage * 1.5)} урона")
-        elif self.hp < 100:
+        elif self.hp < 108:
             cel.take_damage((damage * 1))
             print("Гитлер находится в ТРЕТЬЕЙ ФАЗЕ")
             print(f"Персонаж {cel.name} отхватил по бошке от босса по имени {self.name} и получил {(damage * 1)} урона")

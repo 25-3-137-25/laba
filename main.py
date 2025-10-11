@@ -34,25 +34,25 @@ while hitler.alive():
 
     choice = input().lower().strip()
     if choice not in minions:
-        print("ПЕРСОНАЖА ПОД ТАКИМ НОМЕРОМ НЕТ.")
+        print("Персонажа под таким номером нет.")
         continue
 
     minion = minions[choice]
 
-    print(f"Ваш персонаж - {minion.name}")
+    print(f"Вы выбрали персонажа по имени {minion.name}")
 
     if not minion.zhiv():
         print(f"{minion.name} мертв, выберите другого персонажа")
         continue
     if minion.name == "Кевин":
-        print(f"У {minion.name} сейчас {minion.hp} хп")
-        print("Выберите атаку из двух: 1.1 Удар кулаком 1.2 Удар пятой точкой. Напишите номер атаки")
+        print(f"У {minion.name}а сейчас {minion.hp} хп")
+        print("Выберите атаку из двух представленных, написав соответствующий номер: 1.1 Удар кулаком 1.2 Удар пятой точкой")
     elif minion.name == "Боб":
-        print(f"У {minion.name} сейчас {minion.hp} хп")
-        print("Выберите атаку из двух: 2.1 Крик ПАПАЙЯ 2.2 Вылизывание. Напишите номер атаки")
+        print(f"У {minion.name}а сейчас {minion.hp} хп")
+        print("Выберите атаку из двух представленных, написав соответствующий номер: 2.1 Крик ПАПАЙЯ 2.2 Вылизывание")
     elif minion.name == "Стюарт":
-        print(f"У {minion.name} сейчас {minion.hp} хп")
-        print("Выберите атаку из двух: 3.1 Сделать бобо 3.2 Сделать ауч. Напишите номер атаки")
+        print(f"У {minion.name}а сейчас {minion.hp} хп")
+        print("Выберите атаку из двух представленных, написав соответствующий номер: 3.1 Сделать бобо 3.2 Сделать ауч")
 
 
     attack_choice = input()
@@ -78,6 +78,6 @@ while hitler.alive():
     if minion.hp <= 0:
         print(f"{minion.name} погиб")
     else:
-        print(f"У {minion.name} теперь {minion.hp} хп")
+        print(f"У {minion.name}а теперь {minion.hp} хп")
 print("")
-print("ура гитлер сдох вы молодец")
+print("ура Гитлер сдох вы молодец")
